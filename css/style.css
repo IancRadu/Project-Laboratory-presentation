@@ -69,8 +69,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  width: 190rem;
 }
-
 /* =================================
             General CSS
 ==================================== */
@@ -139,10 +139,13 @@ Elements CSS- index page  -heading
   flex-direction: column;
   /* justify-content: center; */
   text-align: center;
-  height: 75vh;
-  margin-bottom: 2.5vh;
+  height: 70rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  flex-shrink: 1;
 }
 .header-primary {
+  display: block;
   color: #ffae1a;
   font-size: 7.8rem;
   margin: 19rem 0 11rem 0;
@@ -175,7 +178,7 @@ Elements CSS- index page  -method
 ==================================== */
 .methods-title {
   height: 12vh;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
 }
@@ -258,4 +261,25 @@ Elements CSS- index page  -footer
   padding-top: 2.3rem;
   background-color: #fff7e8;
   margin-top: 3rem;
+}
+
+/* ================================
+Elements CSS- index page  -Create login user
+==================================== */
+.screen-login {
+  background-color: #fff7e8;
+  position: absolute;
+  top: 10rem;
+  left: 32rem;
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.login-side {
+  background-color: #ffefd1;
+}
+.login-new-side {
+  background-color: #fff7e8;
 }
