@@ -7,7 +7,7 @@
       name="description"
       content="Contains tools and information usefull for team members which facilitate their day to day work "
     />
-    <link class="title-icon" rel="icon" href="img/logo-ql-removebg.png" /> 
+    <link class="title-icon" rel="icon" href="img/logo-ql-removebg.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <title>Qualification Laboratory</title>
   </head>
   <body>
@@ -23,15 +31,17 @@
       <div class="logo">
         <img src="img/logo-conti.png" alt="Logo Continental" />
       </div>
-      <ul class="nav-bar-links">
-        <li class="nav-bar-link"><a href="#">Equipment List</a></li>
-        <li class="nav-bar-link"><a href="#">Test Duration</a></li>
-        <li class="nav-bar-link"><a href="#">Quotation</a></li>
-        <li class="nav-bar-link"><a href="#">Planning</a></li>
-        <li class="nav-bar-link"><a href="#">Test tracking</a></li>
-        <li class="nav-bar-link"><a href="#">Test report</a></li>
-        <li class="nav-bar-link"><a href="#">Usefull</a></li>
-      </ul>
+      <div class="hidden">
+        <ul class="nav-bar-links">
+          <li class="nav-bar-link"><a href="#">Equipment List</a></li>
+          <li class="nav-bar-link"><a href="#">Test Duration</a></li>
+          <li class="nav-bar-link"><a href="#">Quotation</a></li>
+          <li class="nav-bar-link"><a href="#">Planning</a></li>
+          <li class="nav-bar-link"><a href="#">Test tracking</a></li>
+          <li class="nav-bar-link"><a href="#">Test report</a></li>
+          <li class="nav-bar-link"><a href="#">Usefull</a></li>
+        </ul>
+      </div>
     </nav>
     <header class="header">
       <!-- <img src="img/header.jpg" class="header-img" alt="Night & lights" /> -->
@@ -42,7 +52,57 @@
         <!-- <button class="btn btn-user">New user</button> -->
         <button class="btn btn-user">Login</button>
       </div>
-      <div class="screen-login"><div class="login-side"></div><div class="login-new-side"></div>
+      <div class="screen-login hidden">
+        <div class="screen-login-grid">
+          <div class="login-side">
+            <div class="login-title">
+              <h4><span>Already a member?</span> Sign in</h4>
+            </div>
+            <form class="form-login" action="#ToBeDefined">
+              <label for="e-mail">E-mail</label>
+              <input
+                type="email"
+                id="e-mail"
+                placeholder="continental-corporation.com"
+              /><label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="You know it"
+              /><label for="remember-user">Remember me</label>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="remember-user"
+              /><button class="btn btn-user btn-user-login">Submit</button>
+            </form>
+          </div>
+          <div class="login-new-side">
+            <ion-icon class="icon-close icon" name="close-outline"></ion-icon>
+            <div class="login-title">
+              <h4><span>New member?</span> Sign up</h4>
+            </div>
+            <form class="form-login login-new" action="#ToBeDefined">
+              <label for="full-name">Full Name</label
+              ><input type="text" id="full-name" placeholder="Name" />
+              <label for="e-mail">E-mail</label
+              ><input
+                type="email"
+                id="e-mail"
+                placeholder="continental-corporation.com"
+              /><label for="password">Password</label>
+              <input type="password" id="password" placeholder="A good one" />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Write it again, just to be sure"
+              />
+              <button class="btn btn-user btn-user-create">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <!-- Nav bar is hidden until user-log-in -->
     </header>
     <section>
@@ -60,7 +120,7 @@
       </div>
       <div class="overview-methods">
         <div class="method-1">
-          <h3 class="method-title">Temperature/Climatic</h3>
+          <h3 class="method-title">Temperature & Climatic</h3>
           <div class="method-container">
             <ul class="method-attributes">
               <li class="method-attribute">

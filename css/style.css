@@ -87,7 +87,14 @@ body {
 .grid--2-cols {
   grid-template-columns: 1fr 1fr;
 }
-
+.icon {
+  cursor: pointer;
+  color: #555;
+}
+.hidden {
+  display: none;
+  z-index: 2;
+}
 /* ================================
 Elements CSS- index page  -Navigation
 ==================================== */
@@ -173,6 +180,82 @@ Elements CSS- index page  -heading
 .btn-user:hover {
   background-color: #ffd78d;
 }
+/* ================================
+Elements CSS- index page  -Create login user
+==================================== */
+.screen-login {
+  background-color: #fff7e8;
+  position: absolute;
+  top: 10rem;
+  left: 28rem;
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+}
+.screen-login-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+.login-side {
+  background-color: #ffefd1;
+}
+.login-new-side {
+  background-color: #fff7e8;
+}
+.login-title {
+  font-size: 3.4rem;
+  color: #ffa500;
+  margin: 8rem 0;
+}
+.login-title span {
+  color: #10a9e2;
+}
+.form-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 19rem;
+  gap: 2rem;
+  margin-left: 10rem;
+}
+.form-login label {
+  font-size: 1.8rem;
+  font-weight: 500;
+  align-self: center;
+  justify-self: self-start;
+
+  width: 18rem;
+}
+.form-login input {
+  padding: 0.4rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.btn-user-login {
+  font-weight: 500;
+  grid-column: 1/-1;
+  margin-top: 6rem;
+}
+.btn-user-create {
+  font-weight: 500;
+  grid-column: 1/-1;
+}
+.checkbox {
+  margin: auto auto;
+}
+.icon-close {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 /* ================================
 Elements CSS- index page  -method
 ==================================== */
@@ -261,25 +344,4 @@ Elements CSS- index page  -footer
   padding-top: 2.3rem;
   background-color: #fff7e8;
   margin-top: 3rem;
-}
-
-/* ================================
-Elements CSS- index page  -Create login user
-==================================== */
-.screen-login {
-  background-color: #fff7e8;
-  position: absolute;
-  top: 10rem;
-  left: 32rem;
-  width: 70%;
-  height: 70%;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.login-side {
-  background-color: #ffefd1;
-}
-.login-new-side {
-  background-color: #fff7e8;
 }
