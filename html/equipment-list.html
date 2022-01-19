@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Contains tools and information usefull for team members which facilitate their day to day work "
+      content="laboratory equipment characteristics and business unit special      requirement "
     />
-    <link class="title-icon" rel="icon" href="img/logo-ql-removebg.png" />
+    <link class="title-icon" rel="icon" href="../img/logo-ql-removebg.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +24,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <title>Qualification Laboratory</title>
+    <title>QL - Equipment List</title>
   </head>
   <body>
     <nav class="nav-bar">
@@ -59,7 +59,232 @@
         </ul>
       </div>
     </nav>
-    <footer class="footer">
+    <section class="control">
+      <div class="control-title">
+        <h2>
+          Check laboratory <span>equipment characteristics</span> and add
+          business unit <span>special requirement</span> for tests
+        </h2>
+      </div>
+      <div class="control-main">
+        <select class="control-select" id="equipment">
+          <option class="equipment-empty" value="">Select equipment</option>
+          <option class="equipment-filled" value="1">Climatic_01</option>
+          <option class="equipment-filled" value="2">
+            New equipment
+          </option></select
+        ><select class="control-select" id="unit">
+          <option class="unit-empty" value="">Select business unit</option>
+          <option class="unit-filled" value="1">Vitesco</option>
+          <option class="unit-filled" value="2">
+            New business unit
+          </option></select
+        ><button class="btn control-btn control-addnew">Add new</button
+        ><button class="btn control-btn control-edit">Edit</button
+        ><button class="btn control-btn control-save">Save</button>
+      </div>
+      <ul class="control-equipment">
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-name"
+            >Equipment name:</label
+          ><input
+            class="control-property-value"
+            id="climatic-name"
+            type="text"
+            placeholder="Climatic_01"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-limited"
+            >Limited capability:</label
+          >
+          <select
+            class="control-property-selection"
+            id="climatic-limited"
+            required
+          >
+            <option value="">Please choose one option:</option>
+            <option value="0">No</option>
+            <option value="1">Yes, no humidity</option>
+            <option value="2">Yes, not working</option>
+          </select>
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-humidity"
+            >Humidity capable:</label
+          >
+          <select
+            class="control-property-selection"
+            id="climatic-humidity"
+            required
+          >
+            <option value="">Please choose one option:</option>
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+          </select>
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-volume"
+            >Volume(l):</label
+          ><input
+            class="control-property-value"
+            id="climatic-volume"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-tmax"
+            >Maximum temperature (acc. calibration):</label
+          ><input
+            class="control-property-value"
+            id="climatic-tmax"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-tmin"
+            >Minimum temperature (acc. calibration):</label
+          ><input
+            class="control-property-value"
+            id="climatic-tmin"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-rampup"
+            >Ramp up gradient:</label
+          ><input
+            class="control-property-value"
+            id="climatic-rampup"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-rampdown"
+            >Ramp down gradient:</label
+          ><input
+            class="control-property-value"
+            id="climatic-rampdown"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-custom"
+            >Number of customs:</label
+          ><input
+            class="control-property-value"
+            id="climatic-custom"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-customs-time"
+            >Customs control:</label
+          >
+          <select
+            class="control-property-selection"
+            id="climatic-customs-time"
+            required
+          >
+            <option value="">Please choose one option:</option>
+            <option value="0">Per minute(m)</option>
+            <option value="1">Per second(s)</option>
+            <option value="2">Not available</option>
+          </select>
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-ports"
+            >Entry ports:</label
+          ><input
+            class="control-property-value"
+            id="climatic-ports"
+            type="number"
+            placeholder="Number"
+            required
+          />
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-lao"
+            >Perform LAO:</label
+          >
+          <select class="control-property-selection" id="climatic-lao" required>
+            <option value="">Please choose one option:</option>
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+          </select>
+        </li>
+        <li class="control-property">
+          <label class="equipment-climatic" for="climatic-condensation"
+            >Perform condensation test:</label
+          >
+          <select
+            class="control-property-selection"
+            id="climatic-condensation"
+            required
+          >
+            <option value="">Please choose one option:</option>
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="control-unit">
+        <li class="project-property">
+          <label class="equipment-climatic" for="project-bunit"
+            >Business unit:</label
+          ><input
+            class="project-property-value"
+            id="project-bunit"
+            type="text"
+            placeholder="Name"
+            required
+          /><ion-icon name="add-outline"></ion-icon>
+        </li>
+        <li class="project-property">
+          <label class="equipment-climatic" for="project-name"
+            >Add new project:</label
+          ><input
+            class="project-property-value"
+            id="project-name"
+            type="text"
+            placeholder="Name"
+            required
+          /><ion-icon name="add-outline"></ion-icon>
+        </li>
+
+        <li class="project-property">
+          <label class="equipment-climatic" for="climatic-condensation"
+            >Add new requirement:</label
+          >
+          <select class="project-property-selection" id="climatic-condensation">
+            <option value="">Choose requirement:</option>
+            <option value="0">Customs: 4</option>
+            <option value="1">Tmax:140</option></select
+          ><ion-icon name="add-outline"></ion-icon>
+        </li>
+        <li class="project-property">
+          <h3 class="control-unit-title">
+            Business unit: <span>Vitesco</span>
+          </h3>
+        </li>
+        <li class="project-property">Project name: DKG</li>
+        <li class="project-property">Customs: 4</li>
+      </ul>
+    </section>
+    <footer class="footer footer-side">
       &copy; Copyright 2022. Created by Ianc Radu. All rights reserved.
     </footer>
   </body>
