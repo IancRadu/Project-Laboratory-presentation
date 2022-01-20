@@ -74,7 +74,15 @@ body {
 /* =================================
             General CSS
 ==================================== */
-
+.page-title {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  grid-column: 1/-1;
+  color: #10a9e2;
+  background-color: #fff7e8;
+}
 .container {
   max-width: 120rem;
   padding: 0 3.2rem;
@@ -89,7 +97,13 @@ body {
 }
 .icon {
   cursor: pointer;
+  width: 2rem;
+  height: 2rem;
   color: #555;
+  transition: 0.4s;
+}
+.icon:hover {
+  color: #ffa500;
 }
 .hidden {
   display: none;
@@ -103,6 +117,7 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+
 /* ================================
 Elements CSS- index page  -Navigation
 ==================================== */
@@ -345,7 +360,7 @@ Elements CSS- index page  -method
   margin: 1rem 4rem;
 }
 /* ================================
-Elements CSS- index page  -footer
+Elements CSS -footer
 ==================================== */
 .footer {
   font-size: 1.4rem;
@@ -355,7 +370,16 @@ Elements CSS- index page  -footer
   background-color: #fff7e8;
   margin-top: 3rem;
 }
-
+.footer-side {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  height: 3rem;
+}
+.overview-footer-side {
+  margin-top: 0rem;
+  padding: 0.8rem;
+  height: 3rem;
+}
 /* ================================
 Elements CSS- equipment-list page control
 ==================================== */
@@ -365,18 +389,7 @@ Elements CSS- equipment-list page control
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-.control-title {
-  font-size: 1.6rem;
-  text-align: center;
-  width: 100%;
-  padding: 2rem;
-  grid-column: 1/-1;
-  color: #10a9e2;
-  background-color: #fff7e8;
-}
-.control-title span {
-  color: #10a9e2;
-}
+
 .control-main {
   grid-column: 1/-1;
   grid-row: 2/3;
@@ -400,48 +413,48 @@ Elements CSS- equipment-list page control
 }
 
 /* ================================
-Elements CSS- equipment-list control equipment characteristics
+Elements CSS- equipment-list General parts
 ==================================== */
-.control-equipment {
-  min-height: 53rem;
-  background-color: #88d4f1;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem; */
-  display: grid;
-  justify-content: center;
-}
 
-.control-property {
-  background-color: #fff7e8;
-  margin-bottom: 1rem;
-  width: 50rem;
-  max-height: 3.1rem;
-  /* text-align: start */
-  justify-content: space-between;
-  list-style: none;
-  display: flex;
-}
-.control-property:first-child {
-  margin-top: 1rem;
-}
-.equipment-climatic {
+.eq-label {
+  /* Sets label size for list elements in page equipment list */
   font-size: 1.6rem;
   padding: 0.2rem;
   align-self: center;
 }
-.control-property-value {
+.eq-row-bh {
+  /* Sets row background color, width and height for list elements in page equipment list */
+  background-color: #fff7e8;
+  margin-top: 1rem;
+  width: 50rem;
+  padding: 0.2rem;
+  height: 3rem;
+  justify-content: space-between;
+  display: flex;
+}
+.eq-input-value {
   border: none;
-  width: 8rem;
+  width: 15rem;
   margin-left: 1rem;
   padding: 0.2rem;
 }
-.control-property-selection {
+.eq-input-selection {
   border: none;
   margin-left: 1rem;
   padding: 0.2rem;
   font-family: inherit;
   width: 20rem;
+}
+/* ================================
+Elements CSS- equipment-list control equipment characteristics
+==================================== */
+.control-equipment {
+  min-height: 53rem;
+  background-color: #88d4f1;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 /* ================================
@@ -451,20 +464,66 @@ Elements CSS- equipment-list control business unit(project team)
 .control-unit {
   min-height: 12rem;
   background-color: #88d4f1;
-  display: flex;
-  list-style: none;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 2fr 1fr 8fr;
 }
-.control-unit-title {
+.control-unit--1,
+.control-unit--2 {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+.eq-icon-add,
+.eq-icon-close {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  align-self: center;
+}
+
+.control-unit h4 {
   font-size: 1.8rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.control-unit h4 span {
+  color: #333;
+}
+.unit p {
+  font-size: 1.6rem;
 }
 
 /* ================================
-Elements CSS- equipment-list footer
+Elements CSS- Climatic Overview former Usefull
 ==================================== */
-.footer-side {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  height: 3rem;
+.eq-overview {
+  background-color: #10a9e2;
+  min-height: 79vh;
+}
+.eq-list,
+.eq-list th,
+.eq-list td {
+  border: 0.1rem solid #222;
+}
+.eq-list {
+  width: 70%;
+  background-color: #10a9e2;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.eq-list th {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #88d4f1;
+}
+.eq-list td {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+.eq-list tr {
+  background-color: #ffffff;
+}
+.eq-list tr:hover {
+  background-color: #ffefd1;
 }

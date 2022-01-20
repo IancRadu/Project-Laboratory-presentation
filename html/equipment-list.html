@@ -60,7 +60,7 @@
       </div>
     </nav>
     <section class="control">
-      <div class="control-title">
+      <div class="page-title">
         <h2>
           Check laboratory <span>equipment characteristics</span> and add
           business unit <span>special requirement</span> for tests
@@ -84,118 +84,107 @@
         ><button class="btn control-btn control-save">Save</button>
       </div>
       <ul class="control-equipment">
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-name"
-            >Equipment name:</label
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-name">Equipment name:</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-name"
             type="text"
             placeholder="Climatic_01"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-limited"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-limited"
             >Limited capability:</label
           >
-          <select
-            class="control-property-selection"
-            id="climatic-limited"
-            required
-          >
+          <select class="eq-input-selection" id="climatic-limited" required>
             <option value="">Please choose one option:</option>
             <option value="0">No</option>
             <option value="1">Yes, no humidity</option>
             <option value="2">Yes, not working</option>
           </select>
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-humidity"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-humidity"
             >Humidity capable:</label
           >
-          <select
-            class="control-property-selection"
-            id="climatic-humidity"
-            required
-          >
+          <select class="eq-input-selection" id="climatic-humidity" required>
             <option value="">Please choose one option:</option>
             <option value="0">Yes</option>
             <option value="1">No</option>
           </select>
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-volume"
-            >Volume(l):</label
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-volume">Volume(l):</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-volume"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-tmax"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-tmax"
             >Maximum temperature (acc. calibration):</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-tmax"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-tmin"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-tmin"
             >Minimum temperature (acc. calibration):</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-tmin"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-rampup"
-            >Ramp up gradient:</label
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-rampup">Ramp up gradient:</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-rampup"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-rampdown"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-rampdown"
             >Ramp down gradient:</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-rampdown"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-custom"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-custom"
             >Number of customs:</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-custom"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-customs-time"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-customs-time"
             >Customs control:</label
           >
           <select
-            class="control-property-selection"
+            class="eq-input-selection"
             id="climatic-customs-time"
             required
           >
@@ -205,33 +194,30 @@
             <option value="2">Not available</option>
           </select>
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-ports"
-            >Entry ports:</label
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-ports">Entry ports:</label
           ><input
-            class="control-property-value"
+            class="eq-input-value"
             id="climatic-ports"
             type="number"
             placeholder="Number"
             required
           />
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-lao"
-            >Perform LAO:</label
-          >
-          <select class="control-property-selection" id="climatic-lao" required>
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-lao">Perform LAO:</label>
+          <select class="eq-input-selection" id="climatic-lao" required>
             <option value="">Please choose one option:</option>
             <option value="0">Yes</option>
             <option value="1">No</option>
           </select>
         </li>
-        <li class="control-property">
-          <label class="equipment-climatic" for="climatic-condensation"
+        <li class="eq-row-bh">
+          <label class="eq-label" for="climatic-condensation"
             >Perform condensation test:</label
           >
           <select
-            class="control-property-selection"
+            class="eq-input-selection"
             id="climatic-condensation"
             required
           >
@@ -241,48 +227,85 @@
           </select>
         </li>
       </ul>
-      <ul class="control-unit">
-        <li class="project-property">
-          <label class="equipment-climatic" for="project-bunit"
-            >Business unit:</label
-          ><input
-            class="project-property-value"
-            id="project-bunit"
-            type="text"
-            placeholder="Name"
-            required
-          /><ion-icon name="add-outline"></ion-icon>
-        </li>
-        <li class="project-property">
-          <label class="equipment-climatic" for="project-name"
-            >Add new project:</label
-          ><input
-            class="project-property-value"
-            id="project-name"
-            type="text"
-            placeholder="Name"
-            required
-          /><ion-icon name="add-outline"></ion-icon>
-        </li>
+      <section class="control-unit">
+        <div class="control-unit--1">
+          <div class="eq-row-bh">
+            <label class="eq-label" for="project-unit">Business unit:</label
+            ><input
+              class="eq-input-value"
+              id="project-unit"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <ion-icon class="icon eq-icon-add" name="add-outline"></ion-icon>
+          <div class="eq-row-bh">
+            <label class="eq-label" for="project-name">New project:</label
+            ><input
+              class="eq-input-value"
+              id="project-name"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <ion-icon class="icon eq-icon-add" name="add-outline"></ion-icon>
 
-        <li class="project-property">
-          <label class="equipment-climatic" for="climatic-condensation"
-            >Add new requirement:</label
-          >
-          <select class="project-property-selection" id="climatic-condensation">
-            <option value="">Choose requirement:</option>
-            <option value="0">Customs: 4</option>
-            <option value="1">Tmax:140</option></select
-          ><ion-icon name="add-outline"></ion-icon>
-        </li>
-        <li class="project-property">
-          <h3 class="control-unit-title">
-            Business unit: <span>Vitesco</span>
-          </h3>
-        </li>
-        <li class="project-property">Project name: DKG</li>
-        <li class="project-property">Customs: 4</li>
-      </ul>
+          <div class="eq-row-bh">
+            <label class="eq-label" for="project-requirement"
+              >New requirement:</label
+            >
+            <select class="eq-input-selection" id="project-requirement">
+              <option value="">Choose requirement:</option>
+              <option value="0">Customs: 4</option>
+              <option value="1">Tmax:140</option>
+            </select>
+          </div>
+          <ion-icon class="icon eq-icon-add" name="add-outline"></ion-icon>
+        </div>
+        <h4>Business unit: <span>Vitesco</span></h4>
+        <div class="unit">
+          <p>Project name: DKG</p>
+          <div class="control-unit--2">
+            <div class="eq-row-bh">
+              <label class="eq-label" for="climatic-customs-time"
+                >Customs control:</label
+              >
+              <select
+                class="eq-input-selection"
+                id="climatic-customs-time"
+                required
+              >
+                <option value="">Please choose one option:</option>
+                <option value="0">Per minute(m)</option>
+                <option value="1">Per second(s)</option>
+                <option value="2">Not available</option>
+              </select>
+            </div>
+            <ion-icon
+              class="eq-icon-close icon"
+              name="close-outline"
+            ></ion-icon>
+          </div>
+          <div class="control-unit--2">
+            <div class="eq-row-bh">
+              <label class="eq-label" for="climatic-ports">Entry ports:</label
+                ><input
+                  class="eq-input-value"
+                  id="climatic-ports"
+                  type="number"
+                  placeholder="Number"
+                  required
+                />
+            </div>
+            <ion-icon
+              class="eq-icon-close icon"
+              name="close-outline"
+            ></ion-icon>
+          </div>
+          
+      </section>
     </section>
     <footer class="footer footer-side">
       &copy; Copyright 2022. Created by Ianc Radu. All rights reserved.
