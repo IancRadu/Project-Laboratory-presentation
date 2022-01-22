@@ -61,6 +61,9 @@ Medium: 11px
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 html {
   font-size: 62.5%;
 }
@@ -100,7 +103,7 @@ body {
   width: 2rem;
   height: 2rem;
   color: #555;
-  transition: 0.4s;
+  /* transition: 0.4s; */
 }
 .icon:hover {
   color: #ffa500;
@@ -117,7 +120,12 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
-
+.margin-rsm {
+  margin-right: 1rem;
+}
+.margin-tsm {
+  margin-top: 1rem;
+}
 /* ================================
 Elements CSS- index page  -Navigation
 ==================================== */
@@ -491,13 +499,118 @@ Elements CSS- equipment-list control business unit(project team)
 .unit p {
   font-size: 1.6rem;
 }
+/* ================================
+Elements CSS- Test duration - main buttons
+==================================== */
+.td-main {
+  display: flex;
+  margin-left: 2rem;
+}
+.td-overview {
+  background-color: #0e98cb;
+  min-height: 79vh;
 
+  margin: 0 auto;
+}
+.td-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr;
+}
+.td-overview--1 {
+  text-align: start;
+  background-color: #10a9e2;
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+}
+.project-search {
+  border: none;
+  padding: 1rem;
+  background-color: #ffae1a;
+  width: 15rem;
+  cursor: pointer;
+  font-style: inherit;
+  color: #333;
+  font-style: inherit;
+  color: inherit;
+}
+.project-search:hover {
+  background-color: #ffd78d;
+}
+.td-add-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+}
+.td-btn-add {
+  width: 4rem;
+}
+.td-left {
+  margin-left: 50rem;
+}
+.leg-add {
+  display: flex;
+}
+.td-overview--1-title {
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+.overview-width {
+  width: 19rem;
+}
+.td-overview--2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+  background-color: #58c3eb;
+  padding: 1rem;
+}
+.td-overview--2-title {
+  font-size: 2rem;
+  text-align: center;
+}
+.td-overview--3 {
+  background-color: #88d4f1;
+  margin: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.td-overview--3-head p {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.td-overview--3-head p span {
+  color: #222;
+}
+
+.td-overview--3-body--1 {
+  display: flex;
+  justify-content: center;
+}
+.td-overview--3-body--1 p {
+  background-color: #fff7e8;
+}
+.td-check-test {
+  cursor: pointer;
+}
+.td-overview--3-body--1 thead {
+  background-color: #cfeef9;
+}
 /* ================================
 Elements CSS- Climatic Overview former Usefull
 ==================================== */
-.eq-overview {
+.overview {
   background-color: #10a9e2;
   min-height: 79vh;
+}
+.eq-overview::before {
+  content: "";
+  padding: 0.5rem;
 }
 .eq-list,
 .eq-list th,
@@ -510,6 +623,7 @@ Elements CSS- Climatic Overview former Usefull
   border-collapse: collapse;
   margin: 0 auto;
 }
+
 .eq-list th {
   font-size: 1.8rem;
   text-align: center;
@@ -522,8 +636,67 @@ Elements CSS- Climatic Overview former Usefull
   padding: 0.4rem;
 }
 .eq-list tr {
+  background-color: #e7e5e5;
+}
+.eq-list tr:nth-child(odd) {
   background-color: #ffffff;
 }
+
 .eq-list tr:hover {
-  background-color: #ffefd1;
+  background-color: #f3e2c1;
+}
+/* ================================
+Elements CSS - Planning
+==================================== */
+
+.planning-list,
+.planning-list th,
+.planning-list td {
+  border: 0.001rem transparent #222;
+}
+.planning-list {
+  background-color: #10a9e2;
+  border-collapse: collapse;
+}
+.planning-list thead {
+  border: 0rem;
+  display: flex;
+}
+.planning-list thead th {
+  width: 30rem;
+}
+.planning-list tr {
+  display: flex;
+}
+.planning-list tr td {
+  width: 30rem;
+}
+.planning-list th {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #88d4f1;
+}
+.planning-list thead th {
+}
+.planning-list td {
+  font-size: 1.6rem;
+  text-align: start;
+  padding: 0.4rem;
+}
+.planning-list tr {
+  background-color: #e7e5e5;
+}
+.planning-list tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.planning-list td:hover {
+  background-color: #f3e2c1;
+}
+.planning-testname {
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+  height: 2.2rem;
 }

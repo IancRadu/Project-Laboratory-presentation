@@ -24,6 +24,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="script.js"></script>
     <title>Qualification Laboratory</title>
   </head>
   <body>
@@ -77,16 +78,19 @@
               <input
                 type="email"
                 id="e-mail"
+                value=""
                 placeholder="continental-corporation.com"
               /><label for="password">Password</label>
               <input
                 type="password"
                 id="password"
+                value=""
                 placeholder="You know it"
               /><label for="remember-user">Remember me</label>
               <input
                 class="checkbox"
                 type="checkbox"
+                value=""
                 id="remember-user"
               /><button class="btn btn-user btn-user-login">Submit</button>
             </form>
@@ -98,18 +102,25 @@
             </div>
             <form class="form-login login-new" action="#ToBeDefined">
               <label for="full-name">Full Name</label
-              ><input type="text" id="full-name" placeholder="Name" />
-              <label for="e-mail">E-mail</label
+              ><input type="text" value="" id="full-name" placeholder="Name" />
+              <label for="e-mails">E-mail</label
               ><input
                 type="email"
-                id="e-mail"
+                id="e-mails"
+                value=""
                 placeholder="continental-corporation.com"
-              /><label for="password">Password</label>
-              <input type="password" id="password" placeholder="A good one" />
-              <label for="password">Password</label>
+              /><label for="passwords">Password</label>
               <input
                 type="password"
-                id="password"
+                value=""
+                id="passwords"
+                placeholder="A good one"
+              />
+              <label for="passworda">Password</label>
+              <input
+                type="password"
+                id="passworda"
+                value=""
                 placeholder="Write it again, just to be sure"
               />
               <button class="btn btn-user btn-user-create">Submit</button>
