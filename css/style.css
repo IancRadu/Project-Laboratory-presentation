@@ -61,6 +61,9 @@ Medium: 11px
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 html {
   font-size: 62.5%;
 }
@@ -69,12 +72,20 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-  width: 190rem;
+  min-width: 150rem;
 }
 /* =================================
             General CSS
 ==================================== */
-
+.page-title {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  grid-column: 1/-1;
+  color: #10a9e2;
+  background-color: #fff7e8;
+}
 .container {
   max-width: 120rem;
   padding: 0 3.2rem;
@@ -89,11 +100,31 @@ body {
 }
 .icon {
   cursor: pointer;
+  width: 2rem;
+  height: 2rem;
   color: #555;
+  /* transition: 0.4s; */
+}
+.icon:hover {
+  color: #ffa500;
 }
 .hidden {
   display: none;
   z-index: 2;
+}
+/* Pentru a scrie elimina sagetile de la input field, numeric */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.margin-rsm {
+  margin-right: 1rem;
+}
+.margin-tsm {
+  margin-top: 1rem;
 }
 /* ================================
 Elements CSS- index page  -Navigation
@@ -107,13 +138,13 @@ Elements CSS- index page  -Navigation
   align-items: center;
 }
 .nav-bar .logo img {
-  max-width: 28rem;
+  max-width: 25rem;
   display: block;
 }
 .nav-bar-links {
   list-style: none;
-  gap: 6.4rem;
-  margin: 0 8.8rem;
+  gap: 2.4rem;
+  margin: 0 6.5rem;
   text-decoration: none;
   justify-content: center;
 }
@@ -124,12 +155,12 @@ Elements CSS- index page  -Navigation
   text-align: center;
   background-color: #ffae1a;
   color: #000;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   font-weight: 500;
   border-radius: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   transition: background-color 0.3s;
-  width: 15rem;
+  width: 14rem;
 }
 .nav-bar-link a:hover,
 .nav-bar-link a:active {
@@ -146,7 +177,8 @@ Elements CSS- index page  -heading
   flex-direction: column;
   /* justify-content: center; */
   text-align: center;
-  height: 70rem;
+  height: 56rem;
+
   margin-bottom: 2.5rem;
   position: relative;
   flex-shrink: 1;
@@ -154,8 +186,8 @@ Elements CSS- index page  -heading
 .header-primary {
   display: block;
   color: #ffae1a;
-  font-size: 7.8rem;
-  margin: 19rem 0 11rem 0;
+  font-size: 6.4rem;
+  margin: 12rem 0 11rem 0;
   /* padding: 18rem 28rem; */
 }
 /* .btn-user-create:link,
@@ -260,14 +292,14 @@ Elements CSS- index page  -Create login user
 Elements CSS- index page  -method
 ==================================== */
 .methods-title {
-  height: 12vh;
+  height: 8rem;
   margin-bottom: 3rem;
   display: flex;
   justify-content: center;
 }
 .header-secondary {
   color: #ffa500;
-  font-size: 3em;
+  font-size: 2.4em;
   align-self: center;
   padding: 0 2rem;
 }
@@ -320,8 +352,9 @@ Elements CSS- index page  -method
   display: grid;
   background-color: #fff7e8;
   grid-template-columns: 1fr 1fr;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding-left: 2.5rem;
+
+  padding-bottom: 3rem;
 }
 .method-attributes {
   display: flex;
@@ -329,13 +362,13 @@ Elements CSS- index page  -method
   justify-content: center;
 }
 .method-attribute {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.3;
   color: #10a9e2;
   margin: 1rem 4rem;
 }
 /* ================================
-Elements CSS- index page  -footer
+Elements CSS -footer
 ==================================== */
 .footer {
   font-size: 1.4rem;
@@ -344,4 +377,325 @@ Elements CSS- index page  -footer
   padding-top: 2.3rem;
   background-color: #fff7e8;
   margin-top: 3rem;
+}
+.footer-side {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  height: 3rem;
+}
+.overview-footer-side {
+  margin-top: 0rem;
+  padding: 0.8rem;
+  height: 3rem;
+}
+/* ================================
+Elements CSS- equipment-list page control
+==================================== */
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.control-main {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: flex;
+  gap: 4rem;
+
+  justify-content: center;
+}
+.control-btn,
+.control-select {
+  border: none;
+  padding: 1rem;
+  background-color: #ffae1a;
+  width: 16rem;
+  cursor: pointer;
+  font-style: inherit;
+}
+.control-btn:hover,
+.control-select:hover {
+  background-color: #ffd78d;
+}
+
+/* ================================
+Elements CSS- equipment-list General parts
+==================================== */
+
+.eq-label {
+  /* Sets label size for list elements in page equipment list */
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  align-self: center;
+}
+.eq-row-bh {
+  /* Sets row background color, width and height for list elements in page equipment list */
+  background-color: #fff7e8;
+  margin-top: 1rem;
+  width: 50rem;
+  padding: 0.2rem;
+  height: 3rem;
+  justify-content: space-between;
+  display: flex;
+}
+.eq-input-value {
+  border: none;
+  width: 15rem;
+  margin-left: 1rem;
+  padding: 0.2rem;
+}
+.eq-input-selection {
+  border: none;
+  margin-left: 1rem;
+  padding: 0.2rem;
+  font-family: inherit;
+  width: 20rem;
+}
+/* ================================
+Elements CSS- equipment-list control equipment characteristics
+==================================== */
+.control-equipment {
+  min-height: 53rem;
+  background-color: #88d4f1;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+/* ================================
+Elements CSS- equipment-list control business unit(project team)
+==================================== */
+
+.control-unit {
+  min-height: 12rem;
+  background-color: #88d4f1;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 2fr 1fr 8fr;
+}
+.control-unit--1,
+.control-unit--2 {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+.eq-icon-add,
+.eq-icon-close {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  align-self: center;
+}
+
+.control-unit h4 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.control-unit h4 span {
+  color: #333;
+}
+.unit p {
+  font-size: 1.6rem;
+}
+/* ================================
+Elements CSS- Test duration - main buttons
+==================================== */
+.td-main {
+  display: flex;
+  margin-left: 2rem;
+}
+.td-overview {
+  background-color: #0e98cb;
+  min-height: 79vh;
+
+  margin: 0 auto;
+}
+.td-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr;
+}
+.td-overview--1 {
+  text-align: start;
+  background-color: #10a9e2;
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+}
+.project-search {
+  border: none;
+  padding: 1rem;
+  background-color: #ffae1a;
+  width: 15rem;
+  cursor: pointer;
+  font-style: inherit;
+  color: #333;
+  font-style: inherit;
+  color: inherit;
+}
+.project-search:hover {
+  background-color: #ffd78d;
+}
+.td-add-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+}
+.td-btn-add {
+  width: 4rem;
+}
+.td-left {
+  margin-left: 50rem;
+}
+.leg-add {
+  display: flex;
+}
+.td-overview--1-title {
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+.overview-width {
+  width: 19rem;
+}
+.td-overview--2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  margin: 1rem;
+  background-color: #58c3eb;
+  padding: 1rem;
+}
+.td-overview--2-title {
+  font-size: 2rem;
+  text-align: center;
+}
+.td-overview--3 {
+  background-color: #88d4f1;
+  margin: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.td-overview--3-head p {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.td-overview--3-head p span {
+  color: #222;
+}
+
+.td-overview--3-body--1 {
+  display: flex;
+  justify-content: center;
+}
+.td-overview--3-body--1 p {
+  background-color: #fff7e8;
+}
+.td-check-test {
+  cursor: pointer;
+}
+.td-overview--3-body--1 thead {
+  background-color: #cfeef9;
+}
+/* ================================
+Elements CSS- Climatic Overview former Usefull
+==================================== */
+.overview {
+  background-color: #10a9e2;
+  min-height: 79vh;
+}
+.eq-overview::before {
+  content: "";
+  padding: 0.5rem;
+}
+.eq-list,
+.eq-list th,
+.eq-list td {
+  border: 0.1rem solid #222;
+}
+.eq-list {
+  width: 70%;
+  background-color: #10a9e2;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.eq-list th {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #88d4f1;
+}
+.eq-list td {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+.eq-list tr {
+  background-color: #e7e5e5;
+}
+.eq-list tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.eq-list tr:hover {
+  background-color: #f3e2c1;
+}
+/* ================================
+Elements CSS - Planning
+==================================== */
+
+.planning-list,
+.planning-list th,
+.planning-list td {
+  border: 0.001rem transparent #222;
+}
+.planning-list {
+  background-color: #10a9e2;
+  border-collapse: collapse;
+}
+.planning-list thead {
+  border: 0rem;
+  display: flex;
+}
+.planning-list thead th {
+  width: 30rem;
+}
+.planning-list tr {
+  display: flex;
+}
+.planning-list tr td {
+  width: 30rem;
+}
+.planning-list th {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #88d4f1;
+}
+
+.planning-list td {
+  font-size: 1.6rem;
+  text-align: start;
+  padding: 0.4rem;
+}
+.planning-list tr {
+  background-color: #e7e5e5;
+}
+.planning-list tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.planning-list td:hover {
+  background-color: #f3e2c1;
+}
+.planning-testname {
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+  height: 2.2rem;
 }

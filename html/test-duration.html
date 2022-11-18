@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Contains tools and information usefull for team members which facilitate their day to day work "
+    />
+    <link class="title-icon" rel="icon" href="../img/logo-ql-removebg.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>QL - Test duration</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="../img/logo-conti.png" alt="Logo Continental"
+        /></a>
+      </div>
+      <div class="">
+        <ul class="nav-bar-links">
+          <li class="nav-bar-link">
+            <a href="../html/equipment-list.html">Equipment List</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/test-duration.html">Test Duration</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/quotation.html">Quotation</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/planning.html">Planning</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/test-tracking.html">Test tracking</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/test-report.html">Test report</a>
+          </li>
+          <li class="nav-bar-link">
+            <a href="../html/usefull.html">Usefull</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-title">
+      <h2>Test duration calculator</h2>
+    </div>
+    <div class="td-main">
+      <input
+        type="number"
+        id="id-search"
+        class="project-search"
+        value=""
+        placeholder="Search for Project ID"
+      /><button class="btn control-btn td-btn-add margin-rsm">
+        <ion-icon class="icon td-add-icon" name="add-outline"></ion-icon>
+      </button>
+
+      <button class="btn td-left control-btn">Save</button
+      ><button class="btn control-btn">Clone</button
+      ><button class="btn control-btn">Edit</button
+      ><button class="btn control-btn">Export</button>
+    </div>
+    <main class="td-overview">
+      <section class="td-overview--1">
+        <label class="td-overview--2-title"> Project information</label>
+        <label for="overview-id-number" class="td-overview--1-title"
+          ><br /><br />
+          1.Enter project id number:</label
+        ><br />
+        <input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          id="overview-id-number"
+          placeholder="Project ID: Rxxxxx"
+          required
+        /><label for="overview-project-name" class="td-overview--1-title"
+          ><br /><br />
+          2.Enter project name:</label
+        >
+        <input
+          type="text"
+          class="project-search overview-width"
+          value=""
+          id="overview-project-name"
+          placeholder="Project Name"
+          required
+        /><label for="overview-leg" class="td-overview--1-title"
+          ><br /><br />
+          3.Add leg name:</label
+        >
+        <div class="leg-add">
+          <input
+            type="text"
+            id="overview-leg"
+            class="project-search"
+            value=""
+            placeholder="LEG 1"
+            required
+          />
+          <button class="btn control-btn td-btn-add">
+            <ion-icon class="icon td-add-icon" name="add-outline"></ion-icon>
+          </button>
+        </div>
+        <label for="overview-date" class="td-overview--1-title"
+          ><br />
+          4.Select leg start date:</label
+        ><input
+          type="date"
+          id="overview-date"
+          class="project-search overview-width"
+          value=""
+          required
+        /><label for="overview-nameacqp" class="td-overview--1-title"
+          ><br /><br />
+          5.Add test name:</label
+        >
+
+        <input
+          type="text"
+          id="overview-nameacqp"
+          class="project-search overview-width"
+          value=""
+          placeholder="Name of test acc. QP"
+          required
+        />
+        <!-- <button class="btn control-btn td-btn-add">
+            <ion-icon class="icon td-add-icon" name="add-outline"></ion-icon>
+          </button> -->
+
+        <label class="td-overview--1-title"
+          ><br /><br />
+          <p>6.Select test method:</p></label
+        >
+        <select class="project-search overview-width" id="equipment">
+          <option class="option-empty" value="">Select test method</option>
+          <option class="option-filled" value="1">Test A: Cold</option>
+          <option class="option-filled" value="2">Test B: Dry heat</option>
+        </select>
+        <label class="td-overview--1-title"
+          ><br /><br />
+          7.Add necessary information from right panel:</label
+        ><label class="td-overview--1-title"
+          ><br /><br />
+          8.Click to calculate duration</label
+        >
+        <button class="btn control-btn overview-width">Calcuate</button>
+      </section>
+      <section class="td-overview--2">
+        <label class="td-overview--2-title"> Test parameters</label>
+        <input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Number of samples:"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Room temperature"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Tmin"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Tmax"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Ramp Up"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Ramp Down"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Thold"
+          required
+        /><input
+          type="number"
+          class="project-search overview-width"
+          value=""
+          placeholder="Cycles"
+          required
+        />
+      </section>
+      <section class="td-overview--3">
+        <div class="td-overview--3-head">
+          <p>
+            Qualification <span>R02333 Agilent P23</span> planned by:
+            <span>Victor Popescut</span>
+          </p>
+          <p>Leg 1</p>
+        </div>
+        <div class="td-overview--3-body">
+          <div class="td-overview--3-body--1">
+            <table class="eq-list">
+              <thead>
+                <th>Nr.</th>
+                <th>Test name</th>
+                <th>Duration</th>
+                <th>Test start</th>
+                <th>Test end</th>
+                <th>Equipment name</th>
+                <th>Remove test</th>
+              </thead>
+              <tr>
+                <td>1</td>
+                <td class="td-check-test">Cold storage</td>
+                <td>2333 hours</td>
+                <td>16.01.2022</td>
+                <td>17.01.2022</td>
+                <td>Climatic_01</td>
+                <td>
+                  <ion-icon class="icon" name="close-outline"></ion-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-check-test">Cold storage</td>
+                <td>2333 hours</td>
+                <td>16.01.2022</td>
+                <td>17.01.2022</td>
+                <td>Climatic_01</td>
+                <td>
+                  <ion-icon class="icon" name="close-outline"></ion-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-check-test">Cold storage</td>
+                <td>2333 hours</td>
+                <td>16.01.2022</td>
+                <td>17.01.2022</td>
+                <td>Climatic_01</td>
+                <td>
+                  <ion-icon class="icon" name="close-outline"></ion-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="td-check-test">Cold storage</td>
+                <td>2333 hours</td>
+                <td>16.01.2022</td>
+                <td>17.01.2022</td>
+                <td>Climatic_01</td>
+                <td>
+                  <ion-icon class="icon" name="close-outline"></ion-icon>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer-side overview-footer-side">
+      &copy; Copyright 2022. Created by Ianc Radu. All rights reserved.
+    </footer>
+  </body>
+</html>
